@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+
+<h:form styleClass="" id="first" title="First JSF Page">
+<h:panelGrid columns="3"  border="1" >
+<h:outputLabel value="First Text Area"  />
+
+<h:outputText value="First Text Area" />
+<h:outputText value="First Text Area" />
+
+<h:outputLabel value="Name: " />
+<h:inputText value="#{Author.name}"  requiredMessage="This area must be filled" id="Name" styleClass="" maxlength="20" />
+<h:message for="Name"/>
+<h:inputHidden value="#{Author.name}"   requiredMessage="This area must be filled" id="Name2" styleClass="" maxlength="20" />
+
+<h:commandButton action="First.xhtml" value="First Button" />
+<h:commandButton action="Second.xhtml?faces-redirect=true" value="Second" />
+<h:inputSecret value="#{Author.surname}" />
+<h:graphicImage value="" url="" />
+
+
+</h:panelGrid>
+<h:selectBooleanCheckbox value="" id="isAdmin" />
+<h:outputLabel value="is Admin" />
+<h:selectManyCheckbox value="">
+
+<f:selectItem itemLabel="Swimming" itemValue="1"/>
+<f:selectItem itemLabel="Reading" itemValue="2"/>
+</h:selectManyCheckbox>
+<h:selectOneRadio value="">
+<f:selectItem itemLabel="Engineer" itemValue="1"/>
+<f:selectItem itemLabel="Manegment" itemValue="2"/>
+<f:selectItem itemLabel="Developer" itemValue="3"/>
+</h:selectOneRadio>
+<h:selectOneMenu value="">
+<f:selectItem itemLabel="France" itemValue="1"/>
+<f:selectItem itemLabel="England" itemValue="2"/>
+<f:selectItem itemLabel="USA" itemValue="3"/>
+</h:selectOneMenu>
+<br/><br/>
+<h:selectManyMenu value="">
+<f:selectItem itemLabel="France" itemValue="1"/>
+<f:selectItem itemLabel="England" itemValue="2"/>
+<f:selectItem itemLabel="USA" itemValue="3"/>
+</h:selectManyMenu>
+
+<h:selectManyListbox value="">
+
+<f:selectItem itemLabel="Swimming" itemValue="1"/>
+<f:selectItem itemLabel="Reading" itemValue="2"/>
+</h:selectManyListbox>
+</h:form>
+</body> 
+</html>

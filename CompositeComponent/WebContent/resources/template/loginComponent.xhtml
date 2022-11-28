@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:composite="http://java.sun.com/jsf/composite"> 
+
+<h:head></h:head> 
+<body> 
+<composite:interface>
+<composite:attribute name="Email"/>
+<composite:attribute name="Password"/>
+
+</composite:interface>
+<h:form>
+<h:panelGrid columns="2" border="1">
+
+<h:outputLabel value="Email" />
+<h:inputText value="#{cc.attrs.Email}" />
+<h:outputLabel value="Password" />
+<h:inputText value="#{cc.attrs.Password}" />
+<h:commandButton  value="Login" type="submit" />
+
+
+</h:panelGrid>
+
+</h:form>
+
+</body> 
+</html>

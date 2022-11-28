@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+<h:form>
+<h:panelGrid columns="2" border="1">
+<h:outputLabel value="Name: " />
+<h:outputLabel value="#{employee.name}" />
+<h:outputLabel value="Surname: " />
+<h:outputLabel value="#{employee.surname}" />
+<h:outputLabel value="Username :" />
+<h:outputLabel value="#{employee.username}" />
+<h:outputLabel value="Password: " />
+<h:outputLabel value="#{employee.password}" />
+<h:outputLabel value="isAdmin: " />
+<h:outputLabel value="#{employee.admin}" />
+<h:outputLabel value="Position: " />
+<h:outputLabel value="#{employee.position}" />
+<h:outputLabel value="Gender :" />
+<h:outputLabel value="#{employee.gender}" />
+<h:outputLabel value="Country :" />
+<h:outputLabel value="#{employee.country}" />
+<h:outputLabel value="Hobbies :" />
+<h:outputLabel value="#{employee.ConvertArryToString()}" />
+
+
+</h:panelGrid>
+
+
+</h:form>
+</body> 
+</html>

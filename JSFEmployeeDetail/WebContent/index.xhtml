@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+
+<style type="text/css">
+
+.adjustcolor{color: blue;}
+</style>
+</h:head> 
+<body> 
+<h:form>
+
+<h:panelGrid columns="3" border="1">
+
+<h:outputLabel value="Name:" />
+<h:inputText value="#{employee.name}" id="Name" required="true" requiredMessage="Name must be filled" />
+<h:message for="Name" styleClass="adjustcolor"/>
+
+<h:outputLabel value="Surname:" />
+<h:inputText value="#{employee.surname}" id="Surname" required="true" requiredMessage="Surname must be filled" />
+<h:message for="Surname" styleClass="adjustcolor"/>
+
+<h:outputLabel value="Username:" />
+<h:inputText value="#{employee.username}" id="Username" required="true" requiredMessage="Username must be filled" />
+<h:message for="Username" styleClass="adjustcolor"/>
+
+<h:outputLabel value="Password:" />
+<h:inputSecret value="#{employee.password}" id="Password" required="true" requiredMessage="Password must be filled" />
+<h:message for="Password" styleClass="adjustcolor"/>
+
+<h:outputLabel value="isAdmin" />
+<h:selectBooleanCheckbox value="#{employee.admin}" />
+<br/>
+
+<h:outputLabel value="Age:" />
+<h:inputText value="#{employee.age}" id="Age" required="true" requiredMessage="Age must be filled" />
+<h:message for="Age" styleClass="adjustcolor"/>
+
+
+
+<h:outputLabel value="Gender:" />
+<h:selectOneRadio value="#{employee.gender}" id="Gender" required="true" requiredMessage="Gender must be selected">
+<f:selectItem itemLabel="Male" itemValue="Male"/>
+<f:selectItem itemLabel="Female" itemValue="Female"/>
+</h:selectOneRadio>
+<h:message for="Gender" styleClass="adjustcolor"/>
+<h:outputLabel value="Position:" />
+<h:selectOneRadio value="#{employee.position}" id="Position" required="true" requiredMessage="Position must be selected">
+<f:selectItem itemLabel="Manager" itemValue="Manager"/>
+<f:selectItem itemLabel="Developer" itemValue="Developer"/>
+<f:selectItem itemLabel="Tester" itemValue="Tester"/>
+</h:selectOneRadio>
+<h:message for="Position" styleClass="adjustcolor"/>
+<h:outputLabel value="Countries" />
+
+<h:selectOneMenu value="#{employee.country}" id="Country" required="true" requiredMessage="Country must be selected">
+<f:selectItems value="#{employee.allCountries}" var="counrty" itemLabel="#{counrty.key}"  itemValue="#{counrty.value}" />
+</h:selectOneMenu>
+<h:message for="Country" styleClass="adjustcolor"/>
+
+<h:outputLabel value="Hobbies" />
+<h:selectManyMenu value="#{employee.hobbies}" id="Hobby" required="true" requiredMessage="Hobby must be selected">
+<f:selectItems value="#{employee.allHobbies}" var="hobby" itemLabel="#{hobby.key}" itemValue="#{hobby.value}"/>
+</h:selectManyMenu>
+<h:message for="Hobby" styleClass="adjustcolor"/>
+<h:commandButton action="#{employee.Save()}" value="Save" />
+<h:commandLink action="EmployeeDetail.xhtml" value="Redirect" />
+<h:outputLabel value="" />
+<h:outputLink value="https://twitter.com">Go to Twitter</h:outputLink>
+<h:commandButton action="EmployeeList.xhtml" value="List Page" />
+
+
+</h:panelGrid>
+
+</h:form>
+</body> 
+</html>
